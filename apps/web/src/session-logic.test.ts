@@ -707,6 +707,22 @@ describe("workEntryIndicatesToolFailure", () => {
         detail: "ok",
       }),
     ).toBe(false);
+    expect(
+      workEntryIndicatesToolNeutralStatus({
+        ...base,
+        tone: "thinking",
+        toolLifecycleStatus: "inProgress",
+        detail: "The user asked for a story…",
+      }),
+    ).toBe(false);
+    expect(
+      workEntryIndicatesToolNeutralStatus({
+        ...base,
+        tone: "thinking",
+        toolLifecycleStatus: "completed",
+        detail: "The user asked for a story…",
+      }),
+    ).toBe(false);
   });
 
   it("does not run heuristics on non-tool info rows", () => {

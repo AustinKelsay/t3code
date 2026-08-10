@@ -1,0 +1,597 @@
+[
+  {
+    "type": "agent_start"
+  },
+  {
+    "type": "turn_start"
+  },
+  {
+    "type": "message_start",
+    "message": {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "hey"
+        }
+      ],
+      "timestamp": 1786374071597
+    }
+  },
+  {
+    "type": "message_end",
+    "message": {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "hey"
+        }
+      ],
+      "timestamp": 1786374071597
+    }
+  },
+  {
+    "type": "message_start",
+    "message": {
+      "role": "assistant",
+      "content": [],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-fast",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374071663
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "text_start",
+      "contentIndex": 0,
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Hey"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-fast",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374071663,
+        "responseId": "chatcmpl-8bb51e2874a41cd3",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Hey"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-fast",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374071663,
+      "responseId": "chatcmpl-8bb51e2874a41cd3",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "text_delta",
+      "contentIndex": 0,
+      "delta": "Hey",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Hey"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-fast",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374071663,
+        "responseId": "chatcmpl-8bb51e2874a41cd3",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Hey"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-fast",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374071663,
+      "responseId": "chatcmpl-8bb51e2874a41cd3",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "text_delta",
+      "contentIndex": 0,
+      "delta": "! What",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Hey! What"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-fast",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374071663,
+        "responseId": "chatcmpl-8bb51e2874a41cd3",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Hey! What"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-fast",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374071663,
+      "responseId": "chatcmpl-8bb51e2874a41cd3",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "text_delta",
+      "contentIndex": 0,
+      "delta": " can",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Hey! What can"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-fast",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374071663,
+        "responseId": "chatcmpl-8bb51e2874a41cd3",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Hey! What can"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-fast",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374071663,
+      "responseId": "chatcmpl-8bb51e2874a41cd3",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "text_delta",
+      "contentIndex": 0,
+      "delta": " I help you with?",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Hey! What can I help you with?"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-fast",
+        "usage": {
+          "input": 10408,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "reasoning": 0,
+          "totalTokens": 10418,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "timestamp": 1786374071663,
+        "responseId": "chatcmpl-8bb51e2874a41cd3",
+        "responseModel": "deepseek-v4-flash-0731",
+        "rawStopReason": "stop"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Hey! What can I help you with?"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-fast",
+      "usage": {
+        "input": 10408,
+        "output": 10,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 10418,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "stop",
+      "timestamp": 1786374071663,
+      "responseId": "chatcmpl-8bb51e2874a41cd3",
+      "responseModel": "deepseek-v4-flash-0731",
+      "rawStopReason": "stop"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "text_end",
+      "contentIndex": 0,
+      "content": "Hey! What can I help you with?",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Hey! What can I help you with?"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-fast",
+        "usage": {
+          "input": 10408,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "reasoning": 0,
+          "totalTokens": 10418,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "timestamp": 1786374071663,
+        "responseId": "chatcmpl-8bb51e2874a41cd3",
+        "responseModel": "deepseek-v4-flash-0731",
+        "rawStopReason": "stop"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Hey! What can I help you with?"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-fast",
+      "usage": {
+        "input": 10408,
+        "output": 10,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 10418,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "stop",
+      "timestamp": 1786374071663,
+      "responseId": "chatcmpl-8bb51e2874a41cd3",
+      "responseModel": "deepseek-v4-flash-0731",
+      "rawStopReason": "stop"
+    }
+  },
+  {
+    "type": "message_end",
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Hey! What can I help you with?"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-fast",
+      "usage": {
+        "input": 10408,
+        "output": 10,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 10418,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "stop",
+      "timestamp": 1786374071663,
+      "responseId": "chatcmpl-8bb51e2874a41cd3",
+      "responseModel": "deepseek-v4-flash-0731",
+      "rawStopReason": "stop"
+    }
+  },
+  {
+    "type": "turn_end",
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "text",
+          "text": "Hey! What can I help you with?"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-fast",
+      "usage": {
+        "input": 10408,
+        "output": 10,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 10418,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "stop",
+      "timestamp": 1786374071663,
+      "responseId": "chatcmpl-8bb51e2874a41cd3",
+      "responseModel": "deepseek-v4-flash-0731",
+      "rawStopReason": "stop"
+    },
+    "toolResults": []
+  },
+  {
+    "type": "agent_end",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "hey"
+          }
+        ],
+        "timestamp": 1786374071597
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Hey! What can I help you with?"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-fast",
+        "usage": {
+          "input": 10408,
+          "output": 10,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "reasoning": 0,
+          "totalTokens": 10418,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "timestamp": 1786374071663,
+        "responseId": "chatcmpl-8bb51e2874a41cd3",
+        "responseModel": "deepseek-v4-flash-0731",
+        "rawStopReason": "stop"
+      }
+    ],
+    "willRetry": false
+  },
+  {
+    "type": "agent_settled"
+  }
+]

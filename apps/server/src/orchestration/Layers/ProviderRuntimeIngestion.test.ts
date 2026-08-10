@@ -952,6 +952,177 @@ describe("ProviderRuntimeIngestion", () => {
     expect(message?.streaming).toBe(false);
   });
 
+  it("maps reasoning_text deltas into thinking-tone work activities, not chat messages", async () => {
+    const harness = await createHarness({ serverSettings: { enableAssistantStreaming: true } });
+    const now = "2026-01-01T00:00:00.000Z";
+
+    harness.emit({
+      type: "content.delta",
+      eventId: asEventId("evt-reasoning-delta-1"),
+      provider: ProviderDriverKind.make("piAgent"),
+      createdAt: now,
+      threadId: asThreadId("thread-1"),
+      turnId: asTurnId("turn-reasoning"),
+      itemId: asItemId("turn-reasoning:assistant-reasoning"),
+      payload: {
+        streamKind: "reasoning_text",
+        delta: "thinking aloud",
+      },
+    });
+    harness.emit({
+      type: "item.completed",
+      eventId: asEventId("evt-reasoning-completed"),
+      provider: ProviderDriverKind.make("piAgent"),
+      createdAt: now,
+      threadId: asThreadId("thread-1"),
+      turnId: asTurnId("turn-reasoning"),
+      itemId: asItemId("turn-reasoning:assistant-reasoning"),
+      payload: {
+        itemType: "reasoning",
+        status: "completed",
+        detail: "thinking aloud",
+      },
+    });
+    harness.emit({
+      type: "content.delta",
+      eventId: asEventId("evt-assistant-after-reasoning"),
+      provider: ProviderDriverKind.make("piAgent"),
+      createdAt: "2026-01-01T00:00:01.000Z",
+      threadId: asThreadId("thread-1"),
+      turnId: asTurnId("turn-reasoning"),
+      itemId: asItemId("turn-reasoning:assistant-text"),
+      payload: {
+        streamKind: "assistant_text",
+        delta: "final answer",
+      },
+    });
+    harness.emit({
+      type: "item.completed",
+      eventId: asEventId("evt-assistant-after-reasoning-completed"),
+      provider: ProviderDriverKind.make("piAgent"),
+      createdAt: "2026-01-01T00:00:01.000Z",
+      threadId: asThreadId("thread-1"),
+      turnId: asTurnId("turn-reasoning"),
+      itemId: asItemId("turn-reasoning:assistant-text"),
+      payload: {
+        itemType: "assistant_message",
+        status: "completed",
+      },
+    });
+
+    const thread = await waitForThread(harness.readModel, (entry) =>
+      entry.messages.some(
+        (message: ProviderRuntimeTestMessage) =>
+          message.id === "assistant:turn-reasoning:assistant-text" &&
+          !message.streaming &&
+          message.text === "final answer",
+      ),
+    );
+    const reasoningMessages = thread.messages.filter((message: ProviderRuntimeTestMessage) =>
+      message.id.startsWith("reasoning:"),
+    );
+    expect(reasoningMessages).toHaveLength(0);
+    const thinkingActivity = thread.activities.find(
+      (activity) => activity.kind === "reasoning.progress",
+    );
+    expect(thinkingActivity?.summary).toBe("Thinking");
+    expect((thinkingActivity?.payload as { detail?: string } | undefined)?.detail).toBe(
+      "thinking aloud",
+    );
+    const answer = thread.messages.find(
+      (entry: ProviderRuntimeTestMessage) => entry.id === "assistant:turn-reasoning:assistant-text",
+    );
+    expect(answer?.text).toBe("final answer");
+  });
+
+  it("keeps completed reasoning detail when a late truncated delta arrives", async () => {
+    const harness = await createHarness({ serverSettings: { enableAssistantStreaming: true } });
+    const now = "2026-01-01T00:00:00.000Z";
+    const itemId = asItemId("turn-reasoning-late:assistant-reasoning");
+
+    harness.emit({
+      type: "content.delta",
+      eventId: asEventId("evt-reasoning-late-1"),
+      provider: ProviderDriverKind.make("piAgent"),
+      createdAt: now,
+      threadId: asThreadId("thread-1"),
+      turnId: asTurnId("turn-reasoning-late"),
+      itemId,
+      payload: {
+        streamKind: "reasoning_text",
+        delta: 'The user says "Tell me a story".',
+      },
+    });
+    harness.emit({
+      type: "item.completed",
+      eventId: asEventId("evt-reasoning-late-completed"),
+      provider: ProviderDriverKind.make("piAgent"),
+      createdAt: now,
+      threadId: asThreadId("thread-1"),
+      turnId: asTurnId("turn-reasoning-late"),
+      itemId,
+      payload: {
+        itemType: "reasoning",
+        status: "completed",
+        detail: 'The user says "Tell me a story".',
+      },
+    });
+    harness.emit({
+      type: "content.delta",
+      eventId: asEventId("evt-reasoning-late-truncated"),
+      provider: ProviderDriverKind.make("piAgent"),
+      createdAt: "2026-01-01T00:00:00.100Z",
+      threadId: asThreadId("thread-1"),
+      turnId: asTurnId("turn-reasoning-late"),
+      itemId,
+      payload: {
+        streamKind: "reasoning_text",
+        delta: ".",
+      },
+    });
+    harness.emit({
+      type: "content.delta",
+      eventId: asEventId("evt-reasoning-late-assistant"),
+      provider: ProviderDriverKind.make("piAgent"),
+      createdAt: "2026-01-01T00:00:01.000Z",
+      threadId: asThreadId("thread-1"),
+      turnId: asTurnId("turn-reasoning-late"),
+      itemId: asItemId("turn-reasoning-late:assistant-text"),
+      payload: {
+        streamKind: "assistant_text",
+        delta: "Once upon a time.",
+      },
+    });
+    harness.emit({
+      type: "item.completed",
+      eventId: asEventId("evt-reasoning-late-assistant-completed"),
+      provider: ProviderDriverKind.make("piAgent"),
+      createdAt: "2026-01-01T00:00:01.000Z",
+      threadId: asThreadId("thread-1"),
+      turnId: asTurnId("turn-reasoning-late"),
+      itemId: asItemId("turn-reasoning-late:assistant-text"),
+      payload: {
+        itemType: "assistant_message",
+        status: "completed",
+      },
+    });
+
+    const thread = await waitForThread(harness.readModel, (entry) =>
+      entry.messages.some(
+        (message: ProviderRuntimeTestMessage) =>
+          message.id === "assistant:turn-reasoning-late:assistant-text" &&
+          !message.streaming &&
+          message.text === "Once upon a time.",
+      ),
+    );
+    const thinkingActivity = thread.activities.find(
+      (activity) => activity.kind === "reasoning.progress",
+    );
+    const payload = thinkingActivity?.payload as { detail?: string; status?: string } | undefined;
+    expect(payload?.status).toBe("completed");
+    expect(payload?.detail).toBe('The user says "Tell me a story".');
+  });
+
   it("uses assistant item completion detail when no assistant deltas were streamed", async () => {
     const harness = await createHarness();
     const now = "2026-01-01T00:00:00.000Z";

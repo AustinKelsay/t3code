@@ -1,25 +1,36 @@
 /**
  * Effect-based Pi RPC client over strict JSONL stdin/stdout framing.
  *
+ * Writes go through a long-lived outbound queue into child stdin so we never
+ * end the writable after a single command (Effect's NodeSink defaults to
+ * `endOnDone: true`, which closed stdin and hung `get_state` forever).
+ *
  * @module provider/pi/PiRpcClient
  */
 import * as Cause from "effect/Cause";
 import * as Deferred from "effect/Deferred";
+import * as Duration from "effect/Duration";
 import * as Effect from "effect/Effect";
 import * as Exit from "effect/Exit";
 import * as Fiber from "effect/Fiber";
 import * as PubSub from "effect/PubSub";
+import * as Queue from "effect/Queue";
 import * as Ref from "effect/Ref";
 import * as Schema from "effect/Schema";
 import * as Scope from "effect/Scope";
 import * as Stream from "effect/Stream";
-import * as PlatformError from "effect/PlatformError";
+import type * as PlatformError from "effect/PlatformError";
 import type * as Sink from "effect/Sink";
 import { ChildProcessSpawner } from "effect/unstable/process";
 
 import { createJsonlLineReader, serializeJsonLine } from "./PiJsonl.ts";
 import type { PiAgentSessionEvent, PiRpcCommand, PiRpcResponse } from "./PiRpcProtocol.ts";
 import { resolvePiRpcCommand, type PiSpawnOptions } from "./PiSpawn.ts";
+
+const textEncoder = new TextEncoder();
+
+/** Default ceiling for a single RPC request/response round-trip. */
+export const PI_RPC_COMMAND_TIMEOUT = Duration.seconds(30);
 
 function parseJsonLine(line: string): unknown | undefined {
   try {
@@ -74,7 +85,11 @@ export const makePiRpcClient = (options: PiSpawnOptions) =>
     const pendingRef = yield* Ref.make(new Map<string, PendingRequest>());
     const stoppedRef = yield* Ref.make(false);
     let readerFiber: Fiber.Fiber<void, never> | null = null;
+    let writerFiber: Fiber.Fiber<void, never> | null = null;
     const eventsPubSub = yield* PubSub.unbounded<PiAgentSessionEvent>();
+    // Keep stdin open for the process lifetime: offer lines here instead of
+    // running a finite stream into the stdin sink (which ends/closes the pipe).
+    const outbound = yield* Queue.unbounded<Uint8Array>();
 
     const failPending = (error: PiRpcClientError) =>
       Ref.getAndSet(pendingRef, new Map()).pipe(
@@ -100,16 +115,17 @@ export const makePiRpcClient = (options: PiSpawnOptions) =>
           "type" in data &&
           data.type === "response" &&
           "id" in data &&
-          typeof data.id === "string"
+          (typeof data.id === "string" || typeof data.id === "number")
         ) {
           const response = data as PiRpcResponse;
+          const responseId = String(response.id);
           const pending = yield* Ref.modify(pendingRef, (map) => {
-            const entry = map.get(response.id!);
+            const entry = map.get(responseId);
             if (!entry) {
               return [undefined, map] as const;
             }
             const next = new Map(map);
-            next.delete(response.id!);
+            next.delete(responseId);
             return [entry, next] as const;
           });
           if (pending) {
@@ -131,17 +147,16 @@ export const makePiRpcClient = (options: PiSpawnOptions) =>
         }
       });
 
-    const writePayload = (
-      activeChild: PiChildProcess,
-      payload: string,
-    ): Effect.Effect<void, PiRpcClientError> =>
-      Stream.run(Stream.encodeText(Stream.make(payload)), activeChild.stdin).pipe(
-        Effect.mapError(
-          (cause) =>
-            new PiRpcClientError({
-              detail: "Failed to write Pi RPC payload.",
-              cause,
-            }),
+    const writePayload = (payload: string): Effect.Effect<void, PiRpcClientError> =>
+      Queue.offer(outbound, textEncoder.encode(payload)).pipe(
+        Effect.flatMap((accepted) =>
+          accepted
+            ? Effect.void
+            : Effect.fail(
+                new PiRpcClientError({
+                  detail: "Failed to enqueue Pi RPC payload (stdin writer stopped).",
+                }),
+              ),
         ),
       );
 
@@ -149,6 +164,10 @@ export const makePiRpcClient = (options: PiSpawnOptions) =>
       sessionScope,
       Effect.gen(function* () {
         yield* Ref.set(stoppedRef, true);
+        yield* Queue.shutdown(outbound).pipe(Effect.ignore);
+        if (writerFiber) {
+          yield* Fiber.interrupt(writerFiber).pipe(Effect.ignore);
+        }
         if (readerFiber) {
           yield* Fiber.interrupt(readerFiber).pipe(Effect.ignore);
         }
@@ -184,6 +203,24 @@ export const makePiRpcClient = (options: PiSpawnOptions) =>
           ),
         );
         child = spawned as unknown as PiChildProcess;
+
+        writerFiber = yield* Stream.fromQueue(outbound).pipe(
+          Stream.run(spawned.stdin),
+          Effect.catchCause((cause) =>
+            Effect.gen(function* () {
+              if (yield* Ref.get(stoppedRef)) {
+                return;
+              }
+              yield* failPending(
+                new PiRpcClientError({
+                  detail: "Pi RPC stdin writer failed.",
+                  cause: Cause.squash(cause),
+                }),
+              );
+            }),
+          ),
+          Effect.forkIn(sessionScope),
+        );
 
         const reader = createJsonlLineReader();
         readerFiber = yield* spawned.stdout.pipe(
@@ -237,8 +274,25 @@ export const makePiRpcClient = (options: PiSpawnOptions) =>
           next.set(requestId, { deferred });
           return next;
         });
-        yield* writePayload(child, serializeJsonLine(payload));
-        return yield* Deferred.await(deferred);
+        yield* writePayload(serializeJsonLine(payload));
+        return yield* Deferred.await(deferred).pipe(
+          Effect.timeoutOrElse({
+            duration: PI_RPC_COMMAND_TIMEOUT,
+            orElse: () =>
+              Effect.fail(
+                new PiRpcClientError({
+                  detail: `Pi RPC command '${command.type}' timed out after ${Duration.toMillis(PI_RPC_COMMAND_TIMEOUT)}ms. Stderr: ${stderr.slice(-2000)}`,
+                }),
+              ),
+          }),
+          Effect.ensuring(
+            Ref.update(pendingRef, (pending) => {
+              const next = new Map(pending);
+              next.delete(requestId);
+              return next;
+            }),
+          ),
+        );
       });
 
     const writeLine = (value: unknown) =>
@@ -246,7 +300,7 @@ export const makePiRpcClient = (options: PiSpawnOptions) =>
         if (!child) {
           return yield* new PiRpcClientError({ detail: "Pi RPC client is not started." });
         }
-        yield* writePayload(child, serializeJsonLine(value));
+        yield* writePayload(serializeJsonLine(value));
       });
 
     return {

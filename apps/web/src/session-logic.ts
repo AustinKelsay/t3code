@@ -287,6 +287,13 @@ export function workEntryIndicatesToolNeutralStatus(entry: WorkLogEntry): boolea
   if (entry.agentSpawn !== undefined) {
     return false;
   }
+  // Reasoning / thinking commentary must stay visible under "Worked for …".
+  // Tone "thinking" is tool-like for affordances, but never success — without
+  // this carve-out the neutral filter hid the only reasoning row and the fold
+  // expanded to an empty body.
+  if (entry.tone === "thinking") {
+    return false;
+  }
   if (!workLogEntryIsToolLike(entry)) {
     return false;
   }
@@ -844,7 +851,7 @@ function toDerivedWorkLogEntry(activity: OrchestrationThreadActivity): DerivedWo
     turnId: activity.turnId,
     label: taskLabel || activity.summary,
     tone:
-      activity.kind === "task.progress"
+      activity.kind === "task.progress" || activity.kind === "reasoning.progress"
         ? "thinking"
         : activity.tone === "approval"
           ? "info"

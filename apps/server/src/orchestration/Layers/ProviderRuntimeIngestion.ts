@@ -1639,6 +1639,12 @@ const make = Effect.gen(function* () {
         event.type === "content.delta" && event.payload.streamKind === "assistant_text"
           ? event.payload.delta
           : undefined;
+      const reasoningDelta =
+        event.type === "content.delta" &&
+        (event.payload.streamKind === "reasoning_text" ||
+          event.payload.streamKind === "reasoning_summary_text")
+          ? event.payload.delta
+          : undefined;
       const proposedPlanDelta =
         event.type === "turn.proposed.delta" ? event.payload.delta : undefined;
 
@@ -1678,6 +1684,59 @@ const make = Effect.gen(function* () {
             messageId: assistantMessageId,
             delta: assistantDelta,
             ...(turnId ? { turnId } : {}),
+            createdAt: now,
+          });
+        }
+      }
+
+      // Reasoning belongs in the thinking work-log UI (tone "thinking"), not as
+      // a normal assistant message bubble. Stable activity ids replace-in-place
+      // so the row streams without creating chat messages.
+      if (reasoningDelta && reasoningDelta.length > 0) {
+        const turnId = toTurnId(event.turnId);
+        const reasoningActivityId = EventId.make(
+          `reasoning:${thread.id}:${event.itemId ?? turnId ?? event.eventId}`,
+        );
+        const bufferedKey = MessageId.make(`reasoning-buf:${reasoningActivityId}`);
+        const detailedThread = yield* getLoadedThreadDetail();
+        const existingActivity = detailedThread?.activities.find(
+          (activity) => activity.id === reasoningActivityId,
+        );
+        const existingPayload =
+          existingActivity?.payload && typeof existingActivity.payload === "object"
+            ? (existingActivity.payload as { detail?: unknown; status?: unknown })
+            : undefined;
+        const existingDetail =
+          typeof existingPayload?.detail === "string" ? existingPayload.detail : "";
+        const existingStatus =
+          typeof existingPayload?.status === "string" ? existingPayload.status : undefined;
+        // After item.completed takes the buffer, a late truncated delta (e.g. ".")
+        // must not replace the finished Thinking row.
+        if (existingStatus === "completed" && existingDetail.length > 0) {
+          yield* clearBufferedAssistantText(bufferedKey);
+        } else {
+          const previousText = yield* Cache.getOption(
+            bufferedAssistantTextByMessageId,
+            bufferedKey,
+          ).pipe(Effect.map((value) => Option.getOrElse(value, () => existingDetail)));
+          const nextText = `${previousText}${reasoningDelta}`;
+          yield* Cache.set(bufferedAssistantTextByMessageId, bufferedKey, nextText);
+          yield* orchestrationEngine.dispatch({
+            type: "thread.activity.append",
+            commandId: yield* providerCommandId(event, "reasoning-progress"),
+            threadId: thread.id,
+            activity: {
+              id: reasoningActivityId,
+              createdAt: now,
+              tone: "info",
+              kind: "reasoning.progress",
+              summary: "Thinking",
+              payload: {
+                detail: truncateDetail(nextText, 4_000),
+                status: "inProgress",
+              },
+              turnId: turnId ?? null,
+            },
             createdAt: now,
           });
         }
@@ -1750,6 +1809,41 @@ const make = Effect.gen(function* () {
               planMarkdown: event.payload.planMarkdown,
             }
           : undefined;
+
+      if (event.type === "item.completed" && event.payload.itemType === "reasoning") {
+        const turnId = toTurnId(event.turnId);
+        const reasoningActivityId = EventId.make(
+          `reasoning:${thread.id}:${event.itemId ?? turnId ?? event.eventId}`,
+        );
+        const bufferedKey = MessageId.make(`reasoning-buf:${reasoningActivityId}`);
+        const bufferedText = yield* takeBufferedAssistantText(bufferedKey);
+        const detail =
+          (event.payload.detail && event.payload.detail.trim().length > 0
+            ? event.payload.detail
+            : bufferedText) || undefined;
+        if (detail && detail.trim().length > 0) {
+          yield* orchestrationEngine.dispatch({
+            type: "thread.activity.append",
+            commandId: yield* providerCommandId(event, "reasoning-complete"),
+            threadId: thread.id,
+            activity: {
+              id: reasoningActivityId,
+              createdAt: now,
+              tone: "info",
+              kind: "reasoning.progress",
+              summary: "Thinking",
+              payload: {
+                detail: truncateDetail(detail, 4_000),
+                status: "completed",
+              },
+              turnId: turnId ?? null,
+            },
+            createdAt: now,
+          });
+        } else {
+          yield* clearBufferedAssistantText(bufferedKey);
+        }
+      }
 
       if (assistantCompletion) {
         const detailedThread = yield* getLoadedThreadDetail();

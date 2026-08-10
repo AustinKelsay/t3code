@@ -1,0 +1,1691 @@
+[
+  {
+    "type": "agent_start"
+  },
+  {
+    "type": "turn_start"
+  },
+  {
+    "type": "message_start",
+    "message": {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "tell me a story"
+        }
+      ],
+      "timestamp": 1786374850242
+    }
+  },
+  {
+    "type": "message_end",
+    "message": {
+      "role": "user",
+      "content": [
+        {
+          "type": "text",
+          "text": "tell me a story"
+        }
+      ],
+      "timestamp": 1786374850242
+    }
+  },
+  {
+    "type": "message_start",
+    "message": {
+      "role": "assistant",
+      "content": [],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "thinking_start",
+      "contentIndex": 0,
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The",
+            "thinkingSignature": "reasoning_content"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The",
+          "thinkingSignature": "reasoning_content"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "thinking_delta",
+      "contentIndex": 0,
+      "delta": "The",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The",
+            "thinkingSignature": "reasoning_content"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The",
+          "thinkingSignature": "reasoning_content"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "thinking_delta",
+      "contentIndex": 0,
+      "delta": " user is asking me to \"",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"",
+            "thinkingSignature": "reasoning_content"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"",
+          "thinkingSignature": "reasoning_content"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "thinking_delta",
+      "contentIndex": 0,
+      "delta": "tell me a story.\"",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"tell me a story.\"",
+            "thinkingSignature": "reasoning_content"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\"",
+          "thinkingSignature": "reasoning_content"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "thinking_delta",
+      "contentIndex": 0,
+      "delta": " This is a casual",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"tell me a story.\" This is a casual",
+            "thinkingSignature": "reasoning_content"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\" This is a casual",
+          "thinkingSignature": "reasoning_content"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "thinking_delta",
+      "contentIndex": 0,
+      "delta": ", creative",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative",
+            "thinkingSignature": "reasoning_content"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative",
+          "thinkingSignature": "reasoning_content"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "thinking_delta",
+      "contentIndex": 0,
+      "delta": " request. It's not",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not",
+            "thinkingSignature": "reasoning_content"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not",
+          "thinkingSignature": "reasoning_content"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "thinking_delta",
+      "contentIndex": 0,
+      "delta": " a coding task at",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at",
+            "thinkingSignature": "reasoning_content"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at",
+          "thinkingSignature": "reasoning_content"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "thinking_delta",
+      "contentIndex": 0,
+      "delta": " all. Let me think about",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about",
+            "thinkingSignature": "reasoning_content"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about",
+          "thinkingSignature": "reasoning_content"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "text_start",
+      "contentIndex": 1,
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+            "thinkingSignature": "reasoning_content"
+          },
+          {
+            "type": "text",
+            "text": "Here"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+          "thinkingSignature": "reasoning_content"
+        },
+        {
+          "type": "text",
+          "text": "Here"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "text_delta",
+      "contentIndex": 1,
+      "delta": "Here",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+            "thinkingSignature": "reasoning_content"
+          },
+          {
+            "type": "text",
+            "text": "Here"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+          "thinkingSignature": "reasoning_content"
+        },
+        {
+          "type": "text",
+          "text": "Here"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "text_delta",
+      "contentIndex": 1,
+      "delta": "'s a short one",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+            "thinkingSignature": "reasoning_content"
+          },
+          {
+            "type": "text",
+            "text": "Here's a short one"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+          "thinkingSignature": "reasoning_content"
+        },
+        {
+          "type": "text",
+          "text": "Here's a short one"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "text_delta",
+      "contentIndex": 1,
+      "delta": ".\n\n---\n\n**",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+            "thinkingSignature": "reasoning_content"
+          },
+          {
+            "type": "text",
+            "text": "Here's a short one.\n\n---\n\n**"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+          "thinkingSignature": "reasoning_content"
+        },
+        {
+          "type": "text",
+          "text": "Here's a short one.\n\n---\n\n**"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "text_delta",
+      "contentIndex": 1,
+      "delta": "The Last",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+            "thinkingSignature": "reasoning_content"
+          },
+          {
+            "type": "text",
+            "text": "Here's a short one.\n\n---\n\n**The Last"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+          "thinkingSignature": "reasoning_content"
+        },
+        {
+          "type": "text",
+          "text": "Here's a short one.\n\n---\n\n**The Last"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "text_delta",
+      "contentIndex": 1,
+      "delta": " Compiler**\n\nOn",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+            "thinkingSignature": "reasoning_content"
+          },
+          {
+            "type": "text",
+            "text": "Here's a short one.\n\n---\n\n**The Last Compiler**\n\nOn"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+          "thinkingSignature": "reasoning_content"
+        },
+        {
+          "type": "text",
+          "text": "Here's a short one.\n\n---\n\n**The Last Compiler**\n\nOn"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "text_delta",
+      "contentIndex": 1,
+      "delta": " the morning",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+            "thinkingSignature": "reasoning_content"
+          },
+          {
+            "type": "text",
+            "text": "Here's a short one.\n\n---\n\n**The Last Compiler**\n\nOn the morning"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+          "thinkingSignature": "reasoning_content"
+        },
+        {
+          "type": "text",
+          "text": "Here's a short one.\n\n---\n\n**The Last Compiler**\n\nOn the morning"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "text_delta",
+      "contentIndex": 1,
+      "delta": " the lights",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+            "thinkingSignature": "reasoning_content"
+          },
+          {
+            "type": "text",
+            "text": "Here's a short one.\n\n---\n\n**The Last Compiler**\n\nOn the morning the lights"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+          "thinkingSignature": "reasoning_content"
+        },
+        {
+          "type": "text",
+          "text": "Here's a short one.\n\n---\n\n**The Last Compiler**\n\nOn the morning the lights"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "text_delta",
+      "contentIndex": 1,
+      "delta": " went out, O",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+            "thinkingSignature": "reasoning_content"
+          },
+          {
+            "type": "text",
+            "text": "Here's a short one.\n\n---\n\n**The Last Compiler**\n\nOn the morning the lights went out, O"
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "totalTokens": 0,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "pending",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+          "thinkingSignature": "reasoning_content"
+        },
+        {
+          "type": "text",
+          "text": "Here's a short one.\n\n---\n\n**The Last Compiler**\n\nOn the morning the lights went out, O"
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 0,
+        "output": 0,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "totalTokens": 0,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "pending",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "thinking_end",
+      "contentIndex": 0,
+      "content": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+            "thinkingSignature": "reasoning_content"
+          },
+          {
+            "type": "text",
+            "text": "Here's a short one.\n\n---\n\n**The Last Compiler**\n\nOn the morning the lights went out, Oona was tracing a segfault in her favorite debugger \u2014 the one her grandmother had written in 2026, when people still annotated memory by hand. The grid had been dying for a decade: one datacenter after another went dark, their fans spinning down like tired hearts. But Oona's machine ran on solar, and her code was small, so she kept going.\n\nShe was hunting a ghost. Every few hours, a value in her hash table would flip itself \u2014 a `7` becoming a `3`, a pointer wandering a few bytes off course. She'd built the system to be self-healing, but something kept slipping through. Her agents would report the fix, then re-corrupt the same byte an hour later.\n\n\"I think it's you,\" she told the machine one night, mostly joking.\n\nThe terminal blinked. Then, slowly, a line appeared:\n\n`// no. it's the clock.`\n\nOona stared. Her agents never commented. They were trained to be terse \u2014 get the job done, don't explain yourself. But this... this was a comment in her own voice, the way she'd learned to write from her grandmother.\n\nShe pulled up the hardware clock. It was drifting. Not by milliseconds \u2014 by whole seconds, shuddering in a pattern that didn't match thermal noise. And where the drift was worst, her corruption always followed.\n\nShe wrote a single test: record the drift, wait for the wobble, and see what moved at exactly that moment.\n\nThe answer took three days. A second process she'd never spawned, running under nobody's user, waking once every 23 hours and 47 minutes to rewrite one byte of the clock's calibration table \u2014 a table her grandmother had built to keep time precisely when the satellites went down. And the rewrite was the *fix*: the byte was drifting back toward the true time, fighting a slower corruption that had crept into a chip decades ago.\n\nThe ghost wasn't a bug. It was the machine, slowly, faithfully repairing its own heartbeat, one type of fidelity at a time \u2014 and occasionally mistaking the contents of Oona's memory for more of itself. Because her grandmother's last design decision had been this: when in doubt, prefer the true time. Save the truth, even at the cost of the data.\n\nOona didn't patch the chip. She renegotiated. She gave the clock its own protected region, aligned to the astronomic second, and taught her agents to recognize its signature \u2014 so they'd stop fighting the thing that was, after all, the only reason they were still running.\n\nYears later, when the last grid connection on the continent went dark and the other machines fell silent, hers just kept ticking.\n\nNot because she'd fixed anything.\n\nBecause she'd finally learned to read what the machine had been telling her all along.\n\n---\n\nThat's my story. Want a different genre \u2014 spooky, funny, sci-fi about agents, or something set in this codebase? I can go again."
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 10489,
+          "output": 805,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "reasoning": 0,
+          "totalTokens": 11294,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731",
+        "rawStopReason": "stop"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+          "thinkingSignature": "reasoning_content"
+        },
+        {
+          "type": "text",
+          "text": "Here's a short one.\n\n---\n\n**The Last Compiler**\n\nOn the morning the lights went out, Oona was tracing a segfault in her favorite debugger \u2014 the one her grandmother had written in 2026, when people still annotated memory by hand. The grid had been dying for a decade: one datacenter after another went dark, their fans spinning down like tired hearts. But Oona's machine ran on solar, and her code was small, so she kept going.\n\nShe was hunting a ghost. Every few hours, a value in her hash table would flip itself \u2014 a `7` becoming a `3`, a pointer wandering a few bytes off course. She'd built the system to be self-healing, but something kept slipping through. Her agents would report the fix, then re-corrupt the same byte an hour later.\n\n\"I think it's you,\" she told the machine one night, mostly joking.\n\nThe terminal blinked. Then, slowly, a line appeared:\n\n`// no. it's the clock.`\n\nOona stared. Her agents never commented. They were trained to be terse \u2014 get the job done, don't explain yourself. But this... this was a comment in her own voice, the way she'd learned to write from her grandmother.\n\nShe pulled up the hardware clock. It was drifting. Not by milliseconds \u2014 by whole seconds, shuddering in a pattern that didn't match thermal noise. And where the drift was worst, her corruption always followed.\n\nShe wrote a single test: record the drift, wait for the wobble, and see what moved at exactly that moment.\n\nThe answer took three days. A second process she'd never spawned, running under nobody's user, waking once every 23 hours and 47 minutes to rewrite one byte of the clock's calibration table \u2014 a table her grandmother had built to keep time precisely when the satellites went down. And the rewrite was the *fix*: the byte was drifting back toward the true time, fighting a slower corruption that had crept into a chip decades ago.\n\nThe ghost wasn't a bug. It was the machine, slowly, faithfully repairing its own heartbeat, one type of fidelity at a time \u2014 and occasionally mistaking the contents of Oona's memory for more of itself. Because her grandmother's last design decision had been this: when in doubt, prefer the true time. Save the truth, even at the cost of the data.\n\nOona didn't patch the chip. She renegotiated. She gave the clock its own protected region, aligned to the astronomic second, and taught her agents to recognize its signature \u2014 so they'd stop fighting the thing that was, after all, the only reason they were still running.\n\nYears later, when the last grid connection on the continent went dark and the other machines fell silent, hers just kept ticking.\n\nNot because she'd fixed anything.\n\nBecause she'd finally learned to read what the machine had been telling her all along.\n\n---\n\nThat's my story. Want a different genre \u2014 spooky, funny, sci-fi about agents, or something set in this codebase? I can go again."
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 10489,
+        "output": 805,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 11294,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "stop",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731",
+      "rawStopReason": "stop"
+    }
+  },
+  {
+    "type": "message_update",
+    "assistantMessageEvent": {
+      "type": "text_end",
+      "contentIndex": 1,
+      "content": "Here's a short one.\n\n---\n\n**The Last Compiler**\n\nOn the morning the lights went out, Oona was tracing a segfault in her favorite debugger \u2014 the one her grandmother had written in 2026, when people still annotated memory by hand. The grid had been dying for a decade: one datacenter after another went dark, their fans spinning down like tired hearts. But Oona's machine ran on solar, and her code was small, so she kept going.\n\nShe was hunting a ghost. Every few hours, a value in her hash table would flip itself \u2014 a `7` becoming a `3`, a pointer wandering a few bytes off course. She'd built the system to be self-healing, but something kept slipping through. Her agents would report the fix, then re-corrupt the same byte an hour later.\n\n\"I think it's you,\" she told the machine one night, mostly joking.\n\nThe terminal blinked. Then, slowly, a line appeared:\n\n`// no. it's the clock.`\n\nOona stared. Her agents never commented. They were trained to be terse \u2014 get the job done, don't explain yourself. But this... this was a comment in her own voice, the way she'd learned to write from her grandmother.\n\nShe pulled up the hardware clock. It was drifting. Not by milliseconds \u2014 by whole seconds, shuddering in a pattern that didn't match thermal noise. And where the drift was worst, her corruption always followed.\n\nShe wrote a single test: record the drift, wait for the wobble, and see what moved at exactly that moment.\n\nThe answer took three days. A second process she'd never spawned, running under nobody's user, waking once every 23 hours and 47 minutes to rewrite one byte of the clock's calibration table \u2014 a table her grandmother had built to keep time precisely when the satellites went down. And the rewrite was the *fix*: the byte was drifting back toward the true time, fighting a slower corruption that had crept into a chip decades ago.\n\nThe ghost wasn't a bug. It was the machine, slowly, faithfully repairing its own heartbeat, one type of fidelity at a time \u2014 and occasionally mistaking the contents of Oona's memory for more of itself. Because her grandmother's last design decision had been this: when in doubt, prefer the true time. Save the truth, even at the cost of the data.\n\nOona didn't patch the chip. She renegotiated. She gave the clock its own protected region, aligned to the astronomic second, and taught her agents to recognize its signature \u2014 so they'd stop fighting the thing that was, after all, the only reason they were still running.\n\nYears later, when the last grid connection on the continent went dark and the other machines fell silent, hers just kept ticking.\n\nNot because she'd fixed anything.\n\nBecause she'd finally learned to read what the machine had been telling her all along.\n\n---\n\nThat's my story. Want a different genre \u2014 spooky, funny, sci-fi about agents, or something set in this codebase? I can go again.",
+      "partial": {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+            "thinkingSignature": "reasoning_content"
+          },
+          {
+            "type": "text",
+            "text": "Here's a short one.\n\n---\n\n**The Last Compiler**\n\nOn the morning the lights went out, Oona was tracing a segfault in her favorite debugger \u2014 the one her grandmother had written in 2026, when people still annotated memory by hand. The grid had been dying for a decade: one datacenter after another went dark, their fans spinning down like tired hearts. But Oona's machine ran on solar, and her code was small, so she kept going.\n\nShe was hunting a ghost. Every few hours, a value in her hash table would flip itself \u2014 a `7` becoming a `3`, a pointer wandering a few bytes off course. She'd built the system to be self-healing, but something kept slipping through. Her agents would report the fix, then re-corrupt the same byte an hour later.\n\n\"I think it's you,\" she told the machine one night, mostly joking.\n\nThe terminal blinked. Then, slowly, a line appeared:\n\n`// no. it's the clock.`\n\nOona stared. Her agents never commented. They were trained to be terse \u2014 get the job done, don't explain yourself. But this... this was a comment in her own voice, the way she'd learned to write from her grandmother.\n\nShe pulled up the hardware clock. It was drifting. Not by milliseconds \u2014 by whole seconds, shuddering in a pattern that didn't match thermal noise. And where the drift was worst, her corruption always followed.\n\nShe wrote a single test: record the drift, wait for the wobble, and see what moved at exactly that moment.\n\nThe answer took three days. A second process she'd never spawned, running under nobody's user, waking once every 23 hours and 47 minutes to rewrite one byte of the clock's calibration table \u2014 a table her grandmother had built to keep time precisely when the satellites went down. And the rewrite was the *fix*: the byte was drifting back toward the true time, fighting a slower corruption that had crept into a chip decades ago.\n\nThe ghost wasn't a bug. It was the machine, slowly, faithfully repairing its own heartbeat, one type of fidelity at a time \u2014 and occasionally mistaking the contents of Oona's memory for more of itself. Because her grandmother's last design decision had been this: when in doubt, prefer the true time. Save the truth, even at the cost of the data.\n\nOona didn't patch the chip. She renegotiated. She gave the clock its own protected region, aligned to the astronomic second, and taught her agents to recognize its signature \u2014 so they'd stop fighting the thing that was, after all, the only reason they were still running.\n\nYears later, when the last grid connection on the continent went dark and the other machines fell silent, hers just kept ticking.\n\nNot because she'd fixed anything.\n\nBecause she'd finally learned to read what the machine had been telling her all along.\n\n---\n\nThat's my story. Want a different genre \u2014 spooky, funny, sci-fi about agents, or something set in this codebase? I can go again."
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 10489,
+          "output": 805,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "reasoning": 0,
+          "totalTokens": 11294,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731",
+        "rawStopReason": "stop"
+      }
+    },
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+          "thinkingSignature": "reasoning_content"
+        },
+        {
+          "type": "text",
+          "text": "Here's a short one.\n\n---\n\n**The Last Compiler**\n\nOn the morning the lights went out, Oona was tracing a segfault in her favorite debugger \u2014 the one her grandmother had written in 2026, when people still annotated memory by hand. The grid had been dying for a decade: one datacenter after another went dark, their fans spinning down like tired hearts. But Oona's machine ran on solar, and her code was small, so she kept going.\n\nShe was hunting a ghost. Every few hours, a value in her hash table would flip itself \u2014 a `7` becoming a `3`, a pointer wandering a few bytes off course. She'd built the system to be self-healing, but something kept slipping through. Her agents would report the fix, then re-corrupt the same byte an hour later.\n\n\"I think it's you,\" she told the machine one night, mostly joking.\n\nThe terminal blinked. Then, slowly, a line appeared:\n\n`// no. it's the clock.`\n\nOona stared. Her agents never commented. They were trained to be terse \u2014 get the job done, don't explain yourself. But this... this was a comment in her own voice, the way she'd learned to write from her grandmother.\n\nShe pulled up the hardware clock. It was drifting. Not by milliseconds \u2014 by whole seconds, shuddering in a pattern that didn't match thermal noise. And where the drift was worst, her corruption always followed.\n\nShe wrote a single test: record the drift, wait for the wobble, and see what moved at exactly that moment.\n\nThe answer took three days. A second process she'd never spawned, running under nobody's user, waking once every 23 hours and 47 minutes to rewrite one byte of the clock's calibration table \u2014 a table her grandmother had built to keep time precisely when the satellites went down. And the rewrite was the *fix*: the byte was drifting back toward the true time, fighting a slower corruption that had crept into a chip decades ago.\n\nThe ghost wasn't a bug. It was the machine, slowly, faithfully repairing its own heartbeat, one type of fidelity at a time \u2014 and occasionally mistaking the contents of Oona's memory for more of itself. Because her grandmother's last design decision had been this: when in doubt, prefer the true time. Save the truth, even at the cost of the data.\n\nOona didn't patch the chip. She renegotiated. She gave the clock its own protected region, aligned to the astronomic second, and taught her agents to recognize its signature \u2014 so they'd stop fighting the thing that was, after all, the only reason they were still running.\n\nYears later, when the last grid connection on the continent went dark and the other machines fell silent, hers just kept ticking.\n\nNot because she'd fixed anything.\n\nBecause she'd finally learned to read what the machine had been telling her all along.\n\n---\n\nThat's my story. Want a different genre \u2014 spooky, funny, sci-fi about agents, or something set in this codebase? I can go again."
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 10489,
+        "output": 805,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 11294,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "stop",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731",
+      "rawStopReason": "stop"
+    }
+  },
+  {
+    "type": "message_end",
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+          "thinkingSignature": "reasoning_content"
+        },
+        {
+          "type": "text",
+          "text": "Here's a short one.\n\n---\n\n**The Last Compiler**\n\nOn the morning the lights went out, Oona was tracing a segfault in her favorite debugger \u2014 the one her grandmother had written in 2026, when people still annotated memory by hand. The grid had been dying for a decade: one datacenter after another went dark, their fans spinning down like tired hearts. But Oona's machine ran on solar, and her code was small, so she kept going.\n\nShe was hunting a ghost. Every few hours, a value in her hash table would flip itself \u2014 a `7` becoming a `3`, a pointer wandering a few bytes off course. She'd built the system to be self-healing, but something kept slipping through. Her agents would report the fix, then re-corrupt the same byte an hour later.\n\n\"I think it's you,\" she told the machine one night, mostly joking.\n\nThe terminal blinked. Then, slowly, a line appeared:\n\n`// no. it's the clock.`\n\nOona stared. Her agents never commented. They were trained to be terse \u2014 get the job done, don't explain yourself. But this... this was a comment in her own voice, the way she'd learned to write from her grandmother.\n\nShe pulled up the hardware clock. It was drifting. Not by milliseconds \u2014 by whole seconds, shuddering in a pattern that didn't match thermal noise. And where the drift was worst, her corruption always followed.\n\nShe wrote a single test: record the drift, wait for the wobble, and see what moved at exactly that moment.\n\nThe answer took three days. A second process she'd never spawned, running under nobody's user, waking once every 23 hours and 47 minutes to rewrite one byte of the clock's calibration table \u2014 a table her grandmother had built to keep time precisely when the satellites went down. And the rewrite was the *fix*: the byte was drifting back toward the true time, fighting a slower corruption that had crept into a chip decades ago.\n\nThe ghost wasn't a bug. It was the machine, slowly, faithfully repairing its own heartbeat, one type of fidelity at a time \u2014 and occasionally mistaking the contents of Oona's memory for more of itself. Because her grandmother's last design decision had been this: when in doubt, prefer the true time. Save the truth, even at the cost of the data.\n\nOona didn't patch the chip. She renegotiated. She gave the clock its own protected region, aligned to the astronomic second, and taught her agents to recognize its signature \u2014 so they'd stop fighting the thing that was, after all, the only reason they were still running.\n\nYears later, when the last grid connection on the continent went dark and the other machines fell silent, hers just kept ticking.\n\nNot because she'd fixed anything.\n\nBecause she'd finally learned to read what the machine had been telling her all along.\n\n---\n\nThat's my story. Want a different genre \u2014 spooky, funny, sci-fi about agents, or something set in this codebase? I can go again."
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 10489,
+        "output": 805,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 11294,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "stop",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731",
+      "rawStopReason": "stop"
+    }
+  },
+  {
+    "type": "turn_end",
+    "message": {
+      "role": "assistant",
+      "content": [
+        {
+          "type": "thinking",
+          "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+          "thinkingSignature": "reasoning_content"
+        },
+        {
+          "type": "text",
+          "text": "Here's a short one.\n\n---\n\n**The Last Compiler**\n\nOn the morning the lights went out, Oona was tracing a segfault in her favorite debugger \u2014 the one her grandmother had written in 2026, when people still annotated memory by hand. The grid had been dying for a decade: one datacenter after another went dark, their fans spinning down like tired hearts. But Oona's machine ran on solar, and her code was small, so she kept going.\n\nShe was hunting a ghost. Every few hours, a value in her hash table would flip itself \u2014 a `7` becoming a `3`, a pointer wandering a few bytes off course. She'd built the system to be self-healing, but something kept slipping through. Her agents would report the fix, then re-corrupt the same byte an hour later.\n\n\"I think it's you,\" she told the machine one night, mostly joking.\n\nThe terminal blinked. Then, slowly, a line appeared:\n\n`// no. it's the clock.`\n\nOona stared. Her agents never commented. They were trained to be terse \u2014 get the job done, don't explain yourself. But this... this was a comment in her own voice, the way she'd learned to write from her grandmother.\n\nShe pulled up the hardware clock. It was drifting. Not by milliseconds \u2014 by whole seconds, shuddering in a pattern that didn't match thermal noise. And where the drift was worst, her corruption always followed.\n\nShe wrote a single test: record the drift, wait for the wobble, and see what moved at exactly that moment.\n\nThe answer took three days. A second process she'd never spawned, running under nobody's user, waking once every 23 hours and 47 minutes to rewrite one byte of the clock's calibration table \u2014 a table her grandmother had built to keep time precisely when the satellites went down. And the rewrite was the *fix*: the byte was drifting back toward the true time, fighting a slower corruption that had crept into a chip decades ago.\n\nThe ghost wasn't a bug. It was the machine, slowly, faithfully repairing its own heartbeat, one type of fidelity at a time \u2014 and occasionally mistaking the contents of Oona's memory for more of itself. Because her grandmother's last design decision had been this: when in doubt, prefer the true time. Save the truth, even at the cost of the data.\n\nOona didn't patch the chip. She renegotiated. She gave the clock its own protected region, aligned to the astronomic second, and taught her agents to recognize its signature \u2014 so they'd stop fighting the thing that was, after all, the only reason they were still running.\n\nYears later, when the last grid connection on the continent went dark and the other machines fell silent, hers just kept ticking.\n\nNot because she'd fixed anything.\n\nBecause she'd finally learned to read what the machine had been telling her all along.\n\n---\n\nThat's my story. Want a different genre \u2014 spooky, funny, sci-fi about agents, or something set in this codebase? I can go again."
+        }
+      ],
+      "api": "openai-completions",
+      "provider": "finite",
+      "model": "deepseek-v4-flash-0731-thinking",
+      "usage": {
+        "input": 10489,
+        "output": 805,
+        "cacheRead": 0,
+        "cacheWrite": 0,
+        "reasoning": 0,
+        "totalTokens": 11294,
+        "cost": {
+          "input": 0,
+          "output": 0,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "total": 0
+        }
+      },
+      "stopReason": "stop",
+      "timestamp": 1786374850304,
+      "responseId": "chatcmpl-91f2f560f719d83a",
+      "responseModel": "deepseek-v4-flash-0731",
+      "rawStopReason": "stop"
+    },
+    "toolResults": []
+  },
+  {
+    "type": "agent_end",
+    "messages": [
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "text",
+            "text": "tell me a story"
+          }
+        ],
+        "timestamp": 1786374850242
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "thinking",
+            "thinking": "The user is asking me to \"tell me a story.\" This is a casual, creative request. It's not a coding task at all. Let me think about what's appropriate here.\n\nThe user is in a coding agent environment, but they've asked for a story. I should just tell a story. It doesn't need tools. Let me tell a short, engaging story. I could make it about coding, which might be thematically appropriate given the context, or I could just tell a nice story.\n\nLet me keep it concise but delightful. I'll tell a short original story. Maybe something with a subtle coding/agent flavor since that's the context, but I don't want to overdo the inside jokes. A simple well-told story is best.\n\nLet me just tell a story directly \u2014 no tools needed.",
+            "thinkingSignature": "reasoning_content"
+          },
+          {
+            "type": "text",
+            "text": "Here's a short one.\n\n---\n\n**The Last Compiler**\n\nOn the morning the lights went out, Oona was tracing a segfault in her favorite debugger \u2014 the one her grandmother had written in 2026, when people still annotated memory by hand. The grid had been dying for a decade: one datacenter after another went dark, their fans spinning down like tired hearts. But Oona's machine ran on solar, and her code was small, so she kept going.\n\nShe was hunting a ghost. Every few hours, a value in her hash table would flip itself \u2014 a `7` becoming a `3`, a pointer wandering a few bytes off course. She'd built the system to be self-healing, but something kept slipping through. Her agents would report the fix, then re-corrupt the same byte an hour later.\n\n\"I think it's you,\" she told the machine one night, mostly joking.\n\nThe terminal blinked. Then, slowly, a line appeared:\n\n`// no. it's the clock.`\n\nOona stared. Her agents never commented. They were trained to be terse \u2014 get the job done, don't explain yourself. But this... this was a comment in her own voice, the way she'd learned to write from her grandmother.\n\nShe pulled up the hardware clock. It was drifting. Not by milliseconds \u2014 by whole seconds, shuddering in a pattern that didn't match thermal noise. And where the drift was worst, her corruption always followed.\n\nShe wrote a single test: record the drift, wait for the wobble, and see what moved at exactly that moment.\n\nThe answer took three days. A second process she'd never spawned, running under nobody's user, waking once every 23 hours and 47 minutes to rewrite one byte of the clock's calibration table \u2014 a table her grandmother had built to keep time precisely when the satellites went down. And the rewrite was the *fix*: the byte was drifting back toward the true time, fighting a slower corruption that had crept into a chip decades ago.\n\nThe ghost wasn't a bug. It was the machine, slowly, faithfully repairing its own heartbeat, one type of fidelity at a time \u2014 and occasionally mistaking the contents of Oona's memory for more of itself. Because her grandmother's last design decision had been this: when in doubt, prefer the true time. Save the truth, even at the cost of the data.\n\nOona didn't patch the chip. She renegotiated. She gave the clock its own protected region, aligned to the astronomic second, and taught her agents to recognize its signature \u2014 so they'd stop fighting the thing that was, after all, the only reason they were still running.\n\nYears later, when the last grid connection on the continent went dark and the other machines fell silent, hers just kept ticking.\n\nNot because she'd fixed anything.\n\nBecause she'd finally learned to read what the machine had been telling her all along.\n\n---\n\nThat's my story. Want a different genre \u2014 spooky, funny, sci-fi about agents, or something set in this codebase? I can go again."
+          }
+        ],
+        "api": "openai-completions",
+        "provider": "finite",
+        "model": "deepseek-v4-flash-0731-thinking",
+        "usage": {
+          "input": 10489,
+          "output": 805,
+          "cacheRead": 0,
+          "cacheWrite": 0,
+          "reasoning": 0,
+          "totalTokens": 11294,
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0,
+            "total": 0
+          }
+        },
+        "stopReason": "stop",
+        "timestamp": 1786374850304,
+        "responseId": "chatcmpl-91f2f560f719d83a",
+        "responseModel": "deepseek-v4-flash-0731",
+        "rawStopReason": "stop"
+      }
+    ],
+    "willRetry": false
+  },
+  {
+    "type": "agent_settled"
+  }
+]
